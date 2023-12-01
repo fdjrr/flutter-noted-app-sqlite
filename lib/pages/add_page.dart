@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:noted_app_sqlite/data/datasources/local_datasource.dart';
 import 'package:noted_app_sqlite/data/models/note.dart';
+import 'package:noted_app_sqlite/pages/home_page.dart';
 
 class AddPage extends StatefulWidget {
   const AddPage({super.key});
@@ -78,6 +79,10 @@ class _AddPageState extends State<AddPage> {
                       backgroundColor: Theme.of(context).colorScheme.primary,
                     ),
                   );
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => const HomePage()),
+                      (route) => false);
                 }
               },
               child: const Text('Simpan'),

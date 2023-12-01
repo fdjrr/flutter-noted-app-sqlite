@@ -79,13 +79,14 @@ class _EditPageState extends State<EditPage> {
                       createdAt: DateTime.now());
 
                   LocalDataSource().updateNote(note);
-                  Navigator.pushReplacement(
+                  Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
                         return const HomePage();
                       },
                     ),
+                    (route) => false,
                   );
                 }
               },

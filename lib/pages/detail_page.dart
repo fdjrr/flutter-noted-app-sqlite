@@ -58,13 +58,14 @@ class _DetailPageState extends State<DetailPage>
                         onPressed: () async {
                           await LocalDataSource().deleteNote(widget.note.id!);
                           // ignore: use_build_context_synchronously
-                          Navigator.pushReplacement(
+                          Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
                                 return const HomePage();
                               },
                             ),
+                            (route) => false,
                           );
                         },
                         child: const Text('Delete'),
