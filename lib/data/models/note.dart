@@ -7,11 +7,12 @@ class Note {
   final String content;
   final DateTime createdAt;
 
-  Note(
-      {this.id,
-      required this.title,
-      required this.content,
-      required this.createdAt});
+  Note({
+    this.id,
+    required this.title,
+    required this.content,
+    required this.createdAt,
+  });
 
   Map<String, dynamic> toMap() {
     return {

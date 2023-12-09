@@ -53,10 +53,11 @@ class _HomePageState extends State<HomePage> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 16,
-                      crossAxisSpacing: 16,
-                      childAspectRatio: 0.8),
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16,
+                    childAspectRatio: 0.8,
+                  ),
                   itemBuilder: (context, index) {
                     return InkWell(
                       onTap: () {
@@ -78,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.black12,
                               blurRadius: 4,
                               offset: Offset(0, 2),
-                            )
+                            ),
                           ],
                         ),
                         child: Column(
@@ -103,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                                         .textTheme
                                         .bodyMedium!
                                         .copyWith(color: Colors.white),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),

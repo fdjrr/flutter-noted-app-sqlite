@@ -73,10 +73,11 @@ class _EditPageState extends State<EditPage> {
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   Note note = Note(
-                      id: widget.note.id,
-                      title: titleController.text,
-                      content: contentController.text,
-                      createdAt: DateTime.now());
+                    id: widget.note.id,
+                    title: titleController.text,
+                    content: contentController.text,
+                    createdAt: DateTime.now(),
+                  );
 
                   LocalDataSource().updateNote(note);
                   Navigator.pushAndRemoveUntil(
@@ -91,7 +92,7 @@ class _EditPageState extends State<EditPage> {
                 }
               },
               child: const Text('Simpan'),
-            )
+            ),
           ],
         ),
       ),
